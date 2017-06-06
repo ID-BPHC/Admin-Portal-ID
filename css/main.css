@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+
+/* Navigation Bar CSS */
+.navbar-default {
+  background-color: #2b2b88;
+  border-color: #4141aa;
+}
+.navbar-default .navbar-brand {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ecdbff;
+}
+.navbar-default .navbar-text {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ecdbff;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #2b2b88;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #ecdbff;
+  background-color: #4141aa;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li.divider {
+  background-color: #4141aa;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #ecdbff;
+  background-color: #4141aa;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #ecdbff;
+  background-color: #4141aa;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #ecdbff;
+  background-color: #4141aa;
+}
+.navbar-default .navbar-toggle {
+  border-color: #4141aa;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #4141aa;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+  color: #ecdbff;
+}
+h1 {
+	color: #2B2B88;
+	text-align: center;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ecf0f1;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ecdbff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ecdbff;
+    background-color: #4141aa;
+  }
+}
+
+/* Other CSS */
+#heroheading {
+	position: absolute;
+	bottom: 8%;
+	left: 14.8%;
+	color: #FDE175;
+	background-color: #2B2B88;
+	text-shadow: 0px 0px;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	padding-left: 13px;
+	padding-top: 13px;
+	padding-right: 13px;
+	padding-bottom: 13px;
+	border-radius: 150px;
+	font-size: 194.6%;
+}
+#logohead {
+}
+#herologo {
+	position: absolute;
+	width: 12.8%;
+	bottom: 3%;
+	left: 1%;
+}
+#heroimg {
+	width: 100%;
+	z-index: -1
+}
+#hero {
+	position: relative;
+}
+
+@media screen and (min-width:992px) and (max-width:1199px){
+#heroheading {
+	bottom: 5.7%;
+	font-size: 1.7em;
+	left: 11.1%;
+	padding-top: 8.4px;
+	padding-right: 8.4px;
+	padding-bottom: 8.4px;
+	padding-left: 8.4px;
+}
+#herologo {
+	width: 9.6%;
+}
+}
+
+@media screen and (min-width:768px) and (max-width:991px){
+#herologo {
+	width: 10.1%;
+}
+#heroheading {
+	font-size: 1.6em;
+	padding-top: 6.6px;
+	padding-right: 6.6px;
+	padding-bottom: 6.6px;
+	padding-left: 6.6px;
+	left: 11.4%;
+	bottom: 7.4%;
+}
+}
+
+@media screen and (max-width:767px) and (min-width:450px){
+#heroheading {
+	padding-left: 3px;
+	padding-top: 0px;
+	padding-right: 3px;
+	padding-bottom: 0px;
+	border-radius: 0px;
+	font-size: 1.6em;
+	left: 13%;
+	bottom: 6.2%;
+}
+#herologo {
+	width: 10.8%;
+}
+}
+
+@media screen and (max-width:449px) and (min-width:322px){
+#herologo {
+	width: 12.1%;
+}
+#heroheading {
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	border-radius: 0px;
+	font-size: 1.2em;
+	bottom: 6.1%;
+}
+}
+
+@media screen and (max-width:321px){
+#heroheading {
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	border-radius: 0px;
+	font-size: 1.1em;
+	bottom: 4.2%;
+}
+}
