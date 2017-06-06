@@ -79,6 +79,11 @@ h1 {
 	color: #2B2B88;
 	text-align: center;
 }
+footer {
+	text-align: center;
+	color: #2B2B88;
+	font-size: 0.9em;
+}
 
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
