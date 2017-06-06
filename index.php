@@ -54,18 +54,15 @@
   <div class="row" id="hero"> <img src="images/Logo.png" alt="Placeholder image" class="img-responsive" id="herologo">
     <h1 id="heroheading">Administartion Portal</h1>
     <img src="images/hero_img.jpeg" alt="Placeholder image" class="img-responsive" id="heroimg"></div>
-  <div class="row">
+<div class="row">
     <div class="col-md-12 col-lg-10 col-lg-offset-1"><!-- InstanceBeginEditable name="EditRegion3" -->
      <!-- InstanceEndEditable --></div>
   </div>
-  <div class="row">
-    <div class="col-md-12">
-    	<footer>Instruction Division - BITS Pilani Hyderabad Campus</footer>
-    </div>
-  </div>
+  <div class="row" id="foot-div">
+    <footer>Instruction Division - BITS Pilani Hyderabad Campus</footer>
 </div>
-<!-- /.container-fluid --><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="js/jquery-1.11.3.min.js"></script> 
+</div>
+<!-- /.container-fluid --><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> <script src="js/jquery-1.11.3.min.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="js/bootstrap.js"></script>
 </body>

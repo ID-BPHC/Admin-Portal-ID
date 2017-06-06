@@ -81,8 +81,16 @@ h1 {
 }
 footer {
 	text-align: center;
-	color: #2B2B88;
+	color: #FDE175;
 	font-size: 0.9em;
+	background-color: #2B2B88;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+#foot-div {
+	padding-top: 0px;
 }
 
 @media (max-width: 767px) {
