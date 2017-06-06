@@ -27,24 +27,24 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topFixedNavbar1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-      <a class="navbar-brand" href="#">Instruction Division</a></div>
+      <a class="navbar-brand" href="index.php">Instruction Division</a></div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="topFixedNavbar1">
       <ul class="nav navbar-nav">
-        <li><a href="#">Import CSV<span class="sr-only">(current)</span></a></li>
+        <li><a href="import-csv.php">Import CSV<span class="sr-only">(current)</span></a></li>
         
-        <li><a href="#">Open/Close Mid Sem Feedback</a></li>
+        <li><a href="mid-sem-feedback-config.php">Open/Close Mid Sem Feedback</a></li>
         
-        <li><a href="#">Project Allotment</a></li>
+        <li><a href="project-allotment.php">Project Allotment</a></li>
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View Feedbacks<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Mid Sem Feedacks</a></li>
-            <li><a href="#">24x7 Feedbacks</a></li>
+            <li><a href="mid-sem-feedback-view.php">Mid Sem Feedacks</a></li>
+            <li><a href="24x7-feedback-view.php">24x7 Feedbacks</a></li>
           </ul>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Logout</a></li>
+        <li><a href="logout.php">Logout</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
