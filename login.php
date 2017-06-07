@@ -32,7 +32,7 @@ if(isset($_SESSION['username']))
 </div>
       </div>
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-offset-2 col-xs-8" id="login-column">
+        <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-offset-2 col-xs-8 col-lg-6 col-lg-offset-3" id="login-column">
           <h3>Login</h3><br>
           <h4>
           	<?php
