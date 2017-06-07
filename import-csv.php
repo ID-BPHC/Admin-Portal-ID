@@ -1,6 +1,15 @@
+<?php
+session_start();
+if(!isset($_SESSION['username']))
+{
+	header("Location: login.php");
+	die();
+}
+?>
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/LoggedIn-Template.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/LoggedIn-Template.dwt" codeOutsideHTMLIsLocked="true" -->
 <head>
+
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">

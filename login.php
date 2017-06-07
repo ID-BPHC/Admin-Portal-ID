@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(isset($_SESSION['username']))
+{
+	header("Location: index.php");
+	die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,14 +34,22 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-offset-2 col-xs-8" id="login-column">
           <h3>Login</h3><br>
-          <form method="post" name="form1" id="login-form">
+          <h4>
+          	<?php
+			if(isset($_GET['fail']))
+			{
+				echo "Invalid Credentials !";
+			}
+			?>
+          </h4>
+          <form action="controllers/login-controller.php" method="post" name="form1" id="login-form">
             <div class="credentials form-group"><label for="username">Username :</label>
             <input type="text" name="username" id="username" class="form-control"></div>
             <br>
             <div class="credentials form-group"><label for="password">Password :</label>
             <input type="password" name="password" id="password" class="form-control"></div>
             <br>
-            <button type="submit" class="btn btn-warning">Login</button>
+            <button type="submit" class="btn btn-warning" id="submit" name="submit">Login</button>
           </form>
 </div>
 </div>
