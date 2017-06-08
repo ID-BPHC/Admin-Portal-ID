@@ -47,7 +47,7 @@ if(!isset($_SESSION['username']))
         <li><a href="project-allotment.php">Project Allotment</a></li>
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View Feedbacks<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="mid-sem-feedback-view.php">Mid Sem Feedacks</a></li>
+            <li><a href="mid-sem-feedback-view.php">Mid Sem Feedbacks</a></li>
             <li><a href="24x7-feedback-view.php">24x7 Feedbacks</a></li>
           </ul>
         </li>
