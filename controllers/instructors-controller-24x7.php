@@ -16,10 +16,10 @@ if(!isset($_SESSION['username']))
 	<option value="nil">------</option>
 	<option value="all">All Instructors</option>
 	<?php
-	$query = mysqli_query($con, "SELECT DISTINCT(Name) FROM courses_faculty");
+	$query = mysqli_query($con, "SELECT DISTINCT(InsName) FROM feedback_record");
 	while($row = mysqli_fetch_array($query, MYSQLI_ASSOC))
 	{
-		echo "<option value=\"{$row['Name']}\">" . $row['Name'] . "</option>";
+		echo "<option value=\"{$row['InsName']}\">" . $row['InsName'] . "</option>";
 	}
 	?>
 </select></div>

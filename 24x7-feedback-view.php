@@ -79,7 +79,7 @@ if(!isset($_SESSION['username']))
     <div class="row">
       <div class="col-md-12">
         <?php 
-			include("./controllers/instructors-controller.php");  
+			include("controllers/instructors-controller-24x7.php");  
 		?>
       </div>
     </div>
