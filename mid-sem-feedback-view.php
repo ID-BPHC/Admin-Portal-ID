@@ -73,7 +73,7 @@ if(!isset($_SESSION['username']))
       </div>
       <div class="row">
         <div class="col-md-12">
-          <h4><strong>Select and INSTRUCTOR to proceed</strong>&nbsp;</h4>
+          <h4><strong>Select an INSTRUCTOR to proceed</strong>&nbsp;</h4>
         </div>
       </div>
       <div class="row">

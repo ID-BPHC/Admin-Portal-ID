@@ -1,6 +1,8 @@
 @charset "UTF-8";
 #response {
 	text-align: center;
+	border-collapse: collapse;
+	border: 3px solid #2B2B88;
 }
 #response p {
 	text-align: left;
@@ -14,6 +16,7 @@
 	padding-bottom: 15px;
 	padding-left: 8px;
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	border: 1px solid #2B2B88;
 }
 
 #response td
@@ -23,6 +26,7 @@
 	padding-bottom: 15px;
 	padding-left: 8px;
 	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	border: 1px solid #2B2B88;
 }
 
 #response tr:nth-child(even)
