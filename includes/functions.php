@@ -1,5 +1,5 @@
 <?php
-require_once("db.php");
+require_once(__DIR__ . "/db.php");
 
 
 function prep($x)
@@ -12,5 +12,17 @@ function prep($x)
 function redirect($location)
 {
 	echo "<script>window.location.replace(\"{$location}\")</script>";
+}
+
+function is_session_started()
+{
+    if ( php_sapi_name() !== 'cli' ) {
+        if ( version_compare(phpversion(), '5.4.0', '>=') ) {
+            return session_status() === PHP_SESSION_ACTIVE ? TRUE : FALSE;
+        } else {
+            return session_id() === '' ? FALSE : TRUE;
+        }
+    }
+    return FALSE;
 }
 ?>

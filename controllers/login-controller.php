@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../includes/functions.php");
+include(__DIR__ . "/../includes/functions.php");
 if(isset($_POST['submit']))
 {
 	$username = prep($_POST['username']);

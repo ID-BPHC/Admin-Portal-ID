@@ -26,6 +26,7 @@ if(!isset($_SESSION['username']))
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 <!-- TemplateBeginEditable name="head" -->
+<!--Edit me-->
 <!-- TemplateEndEditable -->
 </head>
 
@@ -76,5 +77,8 @@ if(!isset($_SESSION['username']))
 <!-- /.container-fluid --><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> <script src="../js/jquery-1.11.3.min.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="../js/bootstrap.js"></script>
+<!-- TemplateBeginEditable name="js" -->
+<!--Edit me for js-->
+<!-- TemplateEndEditable -->
 </body>
 </html>

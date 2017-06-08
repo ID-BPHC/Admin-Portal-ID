@@ -1,0 +1,59 @@
+@charset "UTF-8";
+#response {
+	text-align: center;
+}
+#response p {
+	text-align: left;
+}
+#response th
+{
+	background-color: rgba(43,43,136,1.00);
+	color: rgba(255,255,255,1.00);
+	padding-top: 15px;
+	padding-right: 8px;
+	padding-bottom: 15px;
+	padding-left: 8px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+
+#response td
+{
+	padding-top: 15px;
+	padding-right: 8px;
+	padding-bottom: 15px;
+	padding-left: 8px;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+}
+
+#response tr:nth-child(even)
+{
+	background-color:#FFFFFF;
+	background-color:rgba(43,43,136,0.30);
+}
+
+#response td:nth-child(4)
+{
+	width: 50%
+}
+
+#response td:nth-child(1)
+{
+	width: 5%
+}
+
+#response td:nth-child(2)
+{
+	width: 5%
+}
+
+#response td:nth-child(3)
+{
+	width: 10%
+}
+
+.pagination {
+	display: block;
+	padding-bottom: 32px;
+	margin-left: auto;
+	margin-right: auto;
+}
