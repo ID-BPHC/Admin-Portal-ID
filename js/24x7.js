@@ -1,7 +1,8 @@
-var selector = document.getElementById("instructors");
+var insSelector = document.getElementById("instructors");
+var pageSelector = document.getElementById("perPage");
 var i;
 
-function getContents(currentPage) {
+function getContents(currentPage, perPage) {
 	"use strict";
 	var j = -1;
 	var tableContent = "<tr><th>Course</th><th>Section</th><th>Instructor Name</th><th>Feedback</th><th>Time</th></tr>";
@@ -15,9 +16,9 @@ function getContents(currentPage) {
 			var totalPages = response.totalPages;
 			for (i = 1; i <= totalPages; i += 1) {
 				if (i === currentPage) {
-					document.getElementById("pages").innerHTML += "<li class=\"active\"><a href=\"javascript:void(0)\" onclick=\"getContents(" + i + ")\">" + i + "</a></li>";
+					document.getElementById("pages").innerHTML += "<li class=\"active\"><a href=\"javascript:void(0)\" onclick=\"getContents(" + i + "," + perPage + ")\">" + i + "</a></li>";
 				} else {
-					document.getElementById("pages").innerHTML += "<li><a href=# onclick=\"getContents(" + i + ")\">" + i + "</a></li>";
+					document.getElementById("pages").innerHTML += "<li><a href=# onclick=\"getContents(" + i + "," + perPage + ")\">" + i + "</a></li>";
 
 				}
 			}
@@ -40,11 +41,17 @@ function getContents(currentPage) {
 
 		}
 	};
-	xhttp.open("GET", "./controllers/24x7-feedback-controller.php?perPage=20&currentPage=" + currentPage + "&instructor=" + selector.value, true);
+	xhttp.open("GET", "./controllers/24x7-feedback-controller.php?perPage=" + perPage + "&currentPage=" + currentPage + "&instructor=" + insSelector.value, true);
 	xhttp.send();
 }
 
-selector.onchange = function () {
+insSelector.onchange = function () {
 	"use strict";
-	getContents(1);
+	getContents(1, document.getElementById("perPage").value);
+};
+
+pageSelector.onchange = function()
+{
+	"use strict";
+	getContents(1, document.getElementById("perPage").value);
 };
