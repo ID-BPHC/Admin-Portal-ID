@@ -39,7 +39,7 @@ if($query && $perPage > 0 && $currentPage > 0)
 			while($row = mysqli_fetch_array($pageQuery, MYSQLI_ASSOC))
 			{
 				$row["time"] = strftime("%e %B %G %r", strtotime($row['time']));
-				array_push($result, $row);
+				array_push($result, utf8ize($row));
 			}
 			echo json_encode($result);
 		}
