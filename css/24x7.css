@@ -2,7 +2,12 @@
 #response {
 	text-align: center;
 	border-collapse: collapse;
-	border: 3px solid #2B2B88;
+	border: 2px solid #2B2B88;
+	width: 100%;
+	padding-left: auto;
+	padding-right: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 #response p {
 	text-align: left;

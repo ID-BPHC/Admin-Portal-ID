@@ -4,13 +4,13 @@ var i;
 
 function getContents(currentPage, perPage) {
 	"use strict";
+	document.getElementById("response").innerHTML = "<h4>Loading...</h4>";
 	var j = -1;
 	var tableContent = "<tr><th>Course</th><th>Section</th><th>Instructor Name</th><th>Answer 1</th><th>Answer 2</th><th>Answer 3</th><th>Time</th></tr>";
 	var xhttp = new XMLHttpRequest();
-	document.getElementById("response").innerHTML = "";
 	xhttp.onreadystatechange = function () {
 		if (this.readyState === 4 && this.status === 200) {
-
+			document.getElementById("response").innerHTML = "";
 			var response = JSON.parse(this.responseText);
 			document.getElementById("pages").innerHTML = "";
 			var totalPages = response.totalPages;
