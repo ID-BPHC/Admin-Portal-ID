@@ -91,6 +91,10 @@ footer {
 #foot-div {
 	padding-top: 0px;
 }
+h3 {
+	color: #2C2B88;
+	text-align: center;
+}
 
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {

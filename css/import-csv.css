@@ -1,0 +1,46 @@
+.upload-form {
+	padding-top: 25px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+	padding-left: 25px;
+}
+.upload-form label {
+	color: #2C2B88;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	text-align: center;
+}
+.upload-form input {
+	height: auto;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+	border: 2.1px dotted rgb(44,43,136);
+	border: 2.1px dotted rgba(44,43,136,0.93);
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-style: normal;
+	font-variant: small-caps;
+	font-size: 16.5px;
+	font-weight: 400;
+}
+#courseDetailsColumn {
+	border-left: thin solid rgb(44,43,136);
+	border-left: thin solid rgba(44,43,136,1.00);
+}
+#uploadRow {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.btn-primary {
+	background-color: #2C2B88;
+}
+.btn-primary:hover {
+	background-color: rgb(44,43,136);
+	background-color: rgba(44,43,136,0.84);
+}
+
+@media (max-width:991px){
+#courseDetailsColumn {
+	border-left-width: 0px;
+	border-top: thin solid #2C2B88;
+}
+}

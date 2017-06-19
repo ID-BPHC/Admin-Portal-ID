@@ -62,7 +62,7 @@ if(!isset($_SESSION['username']))
 </nav>
 <div class="container-fluid">
   <div class="row" id="hero"> <img src="images/Logo.png" alt="Placeholder image" class="img-responsive" id="herologo">
-    <h1 id="heroheading">Administartion Portal</h1>
+    <h1 id="heroheading">Administration Portal</h1>
     <img src="images/hero_img.jpeg" alt="Placeholder image" class="img-responsive" id="heroimg"></div>
 <div class="row">
     <div class="col-md-12 col-lg-10 col-lg-offset-1"><!-- InstanceBeginEditable name="EditRegion3" -->

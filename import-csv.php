@@ -14,7 +14,7 @@ if(!isset($_SESSION['username']))
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Template</title>
+<title>Import CSV</title>
 <!-- InstanceEndEditable -->
 <!-- Bootstrap -->
 <link rel="stylesheet" href="css/bootstrap.css">
@@ -26,6 +26,8 @@ if(!isset($_SESSION['username']))
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 <!-- InstanceBeginEditable name="head" -->
+<link rel=stylesheet href="css/import-csv.css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
 <!-- InstanceEndEditable -->
 </head>
 
@@ -61,13 +63,57 @@ if(!isset($_SESSION['username']))
 </nav>
 <div class="container-fluid">
   <div class="row" id="hero"> <img src="images/Logo.png" alt="Placeholder image" class="img-responsive" id="herologo">
-    <h1 id="heroheading">Administartion Portal</h1>
+    <h1 id="heroheading">Administration Portal</h1>
     <img src="images/hero_img.jpeg" alt="Placeholder image" class="img-responsive" id="heroimg"></div>
 <div class="row">
     <div class="col-md-12 col-lg-10 col-lg-offset-1"><!-- InstanceBeginEditable name="EditRegion3" -->
-      <h1>Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet doloremque cum maxime architecto veritatis id omnis magni dignissimos sint eius, ea, iure praesentium aspernatur error incidunt, quos harum blanditiis quo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit quidem possimus molestiae rerum incidunt iste, consequatur laborum ullam accusantium cumque in, voluptas porro autem repudiandae ipsum, officiis fugiat debitis voluptatem.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quaerat, quo unde quod eos delectus cupiditate eligendi quia iusto repudiandae corporis dignissimos optio! Numquam dicta vero, corporis quis, recusandae doloribus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat enim suscipit, ullam minus. Sapiente qui quas, cupiditate quo quos libero quidem? Nobis, earum, laudantium minus incidunt natus expedita placeat non.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque optio veritatis quam iure rem culpa sequi beatae natus ab dolorum, temporibus, alias in nemo vel quaerat aut ullam quas officiis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, quisquam consequatur esse quasi perspiciatis inventore velit saepe dolore hic aliquid tempora nisi sunt deleniti, iusto itaque dicta omnis earum. Accusamus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sunt facere praesentium corporis odio vitae ab fugiat ut, earum nisi, natus, error incidunt cupiditate fugit minima quae doloribus repudiandae obcaecati.</p>
-    <!-- InstanceEndEditable --></div>
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Import CSV&nbsp;</h1>
+        </div>
+      </div>
+      <div class="row" id="uploadRow">
+<div class="col-md-6" id="facultyListColumn">
+          <div class="row">
+            <div class="col-md-12">
+              <h3>Faculty List</h3>
+            </div>
+          </div>
+<div class="row">
+            <div class="col-md-12" style="">
+              <?php
+				require_once(__DIR__ . "/controllers/import-faculty-list-controller.php");	
+			?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p align="center">Click <a href="samples/faculty.csv">here</a> to download the sample CSV</p>
+            </div>
+          </div>
+</div>
+<div class="col-md-6" id="courseDetailsColumn">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Course Details</h3>
+    </div>
+  </div>
+<div class="row">
+  <div class="col-md-12">
+              <?php
+				require_once(__DIR__ . "/controllers/import-course-details-controller.php");	
+			?>
+    </div>
+</div>
+  <div class="row">
+    <div class="col-md-12">
+     <p align="center">Click <a href="samples/course.csv">here</a> to download the sample CSV</p>
+
+    </div>
+  </div>
+</div>
+      </div>
+<!-- InstanceEndEditable --></div>
   </div>
   <div class="row" id="foot-div">
     <footer>Instruction Division - BITS Pilani Hyderabad Campus</footer>
