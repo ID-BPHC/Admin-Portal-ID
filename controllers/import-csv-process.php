@@ -9,9 +9,9 @@ die();
 
 require_once(__DIR__ . "/../includes/functions.php");
 
-// Faculty List Upload
+// Course Details Upload
 
-if ( isset($_POST["submit-course-details"]) ) {
+if (isset($_POST["submit-course-details"])) {
 
    if (isset($_FILES["course-detail-upload"])) {
 
@@ -96,17 +96,17 @@ if ( isset($_POST["submit-course-details"]) ) {
         echo "</script>";
      }
 } 
-else
+elseif(!(isset($_POST["submit-faculty-list"])))
 {
     echo "<script>";
-    echo "alert(\"No From Data !\");";
+    echo "alert(\"No Form Data !!!\");";
     echo "window.location.replace(\"../import-csv.php\")";
     echo "</script>";
 }
 
-//Course details upload
+//Faculty List Upload
 
-if ( isset($_POST["submit-faculty-list"]) ) {
+if ( isset($_POST["submit-faculty-list"]) && !isset($_POST["submit-course-details"])) {
 
    if (isset($_FILES["faculty-list-upload"])) {
 
@@ -189,10 +189,10 @@ if ( isset($_POST["submit-faculty-list"]) ) {
         echo "</script>";
      }
 } 
-else
+elseif(!(isset($_POST["submit-course-details"])))
 {
     echo "<script>";
-    echo "alert(\"No From Data !\");";
+    echo "alert(\"No Form Data !\");";
     echo "window.location.replace(\"../import-csv.php\")";
     echo "</script>";
 }
