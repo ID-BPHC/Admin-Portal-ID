@@ -46,7 +46,12 @@ if (isset($_POST["submit-course-details"])) {
                 if($handle)
                 {
 					
-					mysqli_query($con, "TRUNCATE TABLE courses_faculty");
+					if(isset($_POST['truncate-courses']))
+					{
+						mysqli_query($con, "TRUNCATE TABLE courses_faculty");
+					}
+					
+					$c = 0;
 					
                     while($row = fgetcsv($handle, 1000, ","))
                     {
@@ -55,6 +60,20 @@ if (isset($_POST["submit-course-details"])) {
                         $section = prep($row[2]);
 						$name = prep($row[3]);
 						$email = prep($row[4]);
+						
+						$q1 = mysqli_query($con, "SELECT * FROM courses_faculty WHERE CourseID LIKE '$cID' AND CourseTitle LIKE '$cTitle' AND Section LIKE '$section' AND Name LIKE '$name' AND email LIKE '$email'");
+						
+						if(!$q1)
+						{
+							die("Check Query Failed !");
+						}
+						
+						if(mysqli_num_rows($q1) > 0)
+						{
+							$c = $c + 1;
+							continue;
+						}
+						
                         $q = mysqli_query($con, "INSERT INTO courses_faculty(CourseID, CourseTitle, Section, Name, email) VALUES ('$cID', '$cTitle', '$section', '$name', '$email')");
                         if(!$q)
                         {
@@ -62,6 +81,14 @@ if (isset($_POST["submit-course-details"])) {
                             $success = 0;
                         }
                     }
+					
+					if($c > 0)
+					{
+						echo "<script>";
+						echo "alert(\"Ignored {$c} Duplicates\");";
+						echo "</script>";
+                
+					}
 
                     echo "<script>";
                     echo "alert(\"{$msg}\");";
@@ -141,13 +168,30 @@ if ( isset($_POST["submit-faculty-list"]) && !isset($_POST["submit-course-detail
                 if($handle)
                 {
 					
-					mysqli_query($con, "TRUNCATE TABLE faculty_email");
+					if(isset($_POST['truncate-faculty']))
+					{
+						mysqli_query($con, "TRUNCATE TABLE faculty_email");
+					}
+					
+					$c = 0;
 					
                     while($row = fgetcsv($handle, 500, ","))
                     {
                         $sno = prep($row[0]);
                         $name = prep($row[1]);
                         $email = prep($row[2]);
+						$q1 = mysqli_query($con, "SELECT * FROM faculty_email WHERE EmailID like '$email'");
+						
+						if(!$q1)
+						{
+							die("Check Query Failed !");
+						}
+						
+						if(mysqli_num_rows($q1) > 0)
+						{
+							$c = $c + 1;
+							continue;
+						}
                         $q = mysqli_query($con, "INSERT INTO faculty_email(SNo, FacultyName, EmailID) VALUES ('$sno', '$name', '$email')");
                         if(!$q)
                         {
@@ -155,6 +199,14 @@ if ( isset($_POST["submit-faculty-list"]) && !isset($_POST["submit-course-detail
                             $success = 0;
                         }
                     }
+					
+					if($c > 0)
+					{
+						echo "<script>";
+						echo "alert(\"Ignored {$c} Duplicates\");";
+						echo "</script>";
+                
+					}
 
                     echo "<script>";
                     echo "alert(\"{$msg}\");";
