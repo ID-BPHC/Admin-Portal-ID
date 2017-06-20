@@ -14,7 +14,8 @@ if(!isset($_SESSION['username']))
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Template</title>
+<title>Mid Semester Feedback Control</title>
+<link href="css/mid-sem-fb-config.css" rel="stylesheet" type="text/css">
 <!-- InstanceEndEditable -->
 <!-- Bootstrap -->
 <link rel="stylesheet" href="css/bootstrap.css">
@@ -26,6 +27,7 @@ if(!isset($_SESSION['username']))
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 <!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" href="css/datepicker.css">
 <!-- InstanceEndEditable -->
 </head>
 
@@ -65,19 +67,28 @@ if(!isset($_SESSION['username']))
     <img src="images/hero_img.jpeg" alt="Placeholder image" class="img-responsive" id="heroimg"></div>
 <div class="row">
     <div class="col-md-12 col-lg-10 col-lg-offset-1"><!-- InstanceBeginEditable name="EditRegion3" -->
-      <h1>Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet doloremque cum maxime architecto veritatis id omnis magni dignissimos sint eius, ea, iure praesentium aspernatur error incidunt, quos harum blanditiis quo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit quidem possimus molestiae rerum incidunt iste, consequatur laborum ullam accusantium cumque in, voluptas porro autem repudiandae ipsum, officiis fugiat debitis voluptatem.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quaerat, quo unde quod eos delectus cupiditate eligendi quia iusto repudiandae corporis dignissimos optio! Numquam dicta vero, corporis quis, recusandae doloribus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat enim suscipit, ullam minus. Sapiente qui quas, cupiditate quo quos libero quidem? Nobis, earum, laudantium minus incidunt natus expedita placeat non.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque optio veritatis quam iure rem culpa sequi beatae natus ab dolorum, temporibus, alias in nemo vel quaerat aut ullam quas officiis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, quisquam consequatur esse quasi perspiciatis inventore velit saepe dolore hic aliquid tempora nisi sunt deleniti, iusto itaque dicta omnis earum. Accusamus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sunt facere praesentium corporis odio vitae ab fugiat ut, earum nisi, natus, error incidunt cupiditate fugit minima quae doloribus repudiandae obcaecati.</p>
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Mid Semester Feedback Control</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+          <?php require_once(__DIR__ . "/controllers/mid-sem-fb-toggle-controller.php") ?>
+        </div>
+      </div>
     <!-- InstanceEndEditable --></div>
   </div>
   <div class="row" id="foot-div">
     <footer>Instruction Division - BITS Pilani Hyderabad Campus</footer>
 </div>
 </div>
-<!-- /.container-fluid --><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> <script src="js/jquery-1.11.3.min.js"></script> 
+<!-- /.container-fluid --><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> <script src="js/jquery-3.2.1.min.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="js/bootstrap.js"></script>
 <!-- InstanceBeginEditable name="js" -->
-<!--Edit me for js-->
+<script type="text/javascript" src="js/datepicker.js"></script>
+<script type="text/javascript" src="js/midsem-fb-config.js"></script>
 <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

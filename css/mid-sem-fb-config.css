@@ -1,0 +1,38 @@
+@charset "UTF-8";
+#off {
+	color: #A80002;
+}
+#on {
+	color: #024A00;
+}
+#offButton {
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #2C2B88;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-size: 20px;
+}
+#offButton:hover {
+	background-color: #3E3E7B;
+}
+
+#onButton {
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #2C2B88;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-size: 20px;
+}
+#onButton:hover {
+	background-color: #3E3E7B;
+}
+
+@media (max-width:465px){
+#offButton {
+	width: auto;
+}
+}
