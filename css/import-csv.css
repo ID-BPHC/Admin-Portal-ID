@@ -9,7 +9,7 @@
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
 	text-align: center;
 }
-.upload-form input {
+.upload-input  {
 	height: auto;
 	padding-top: 15px;
 	padding-bottom: 15px;

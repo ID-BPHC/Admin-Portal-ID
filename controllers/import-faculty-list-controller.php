@@ -11,7 +11,7 @@ if ( !isset( $_SESSION[ 'username' ] ) ) {
 <form action="controllers/import-csv-process.php" method="post" enctype="multipart/form-data" class="upload-form">
 	<div class="form-group">
 		<label for="faculty-list-upload">Select CSV file to upload:</label>
-		<input type="file" name="faculty-list-upload" id="faculty-list-upload" class="form-control">
+		<input type="file" name="faculty-list-upload" id="faculty-list-upload" class="form-control upload-input">
 	</div>
 	<div class="checkbox">
 		<label><input type="checkbox" value="del" name="truncate-faculty" id="truncate-faculty">Delete Old Content</label>
