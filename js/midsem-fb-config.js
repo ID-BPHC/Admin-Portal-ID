@@ -21,6 +21,7 @@ if (document.getElementById("endDate")) {
 
 	document.getElementById("startDate").onchange = function () {
 		"use strict";
+		$("#endDate").datepicker('reset');
 		var dt = $("#startDate").datepicker('getDate');
 		dt.setDate(dt.getDate() + 1);
 		$("#endDate").datepicker('setStartDate', dt);
