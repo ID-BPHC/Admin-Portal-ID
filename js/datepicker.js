@@ -8,7 +8,6 @@
  * Date: @DATE
  */
 var d = new Date();
-d.setDate(d.getDate() - 1);
 
 (function (factory) {
   if (typeof define === 'function' && define.amd) {
@@ -1404,7 +1403,7 @@ d.setDate(d.getDate() - 1);
     autoShow: false,
 
     // Hide the datepicker automatically when picked
-    autoHide: false,
+    autoHide: true,
 
     // Pick the initial date automatically when initialized
     autoPick: false,

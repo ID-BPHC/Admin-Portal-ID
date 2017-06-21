@@ -43,11 +43,11 @@ if(mysqli_num_rows($checkStatus) == 0)
 	echo "<form action=\"controllers/mid-sem-fb-toggle-controller.php\" method=\"POST\">";
 	echo "<div class=\"form-group\">";
 	echo "<label for=\"startDate\">Choose Starting Date</label>";
-	echo "<input data-toggle=\"datepicker\" class=\"form-control\" name=\"startDate\" id=\"startDate\">";
+	echo "<input data-toggle=\"datepicker\" class=\"form-control\" name=\"startDate\" id=\"startDate\" readOnly=\"true\">";
 	echo "</div>";
 	echo "<div class=\"form-group\">";
 	echo "<label for=\"endDate\">Choose Ending Date</label>";
-	echo "<input data-toggle=\"datepicker\" class=\"form-control\" name=\"endDate\" id=\"endDate\">";
+	echo "<input data-toggle=\"datepicker\" class=\"form-control\" name=\"endDate\" id=\"endDate\" readOnly=\"true\">";
 	echo "</div>";
 	echo "<button class=\"btn btn-primary btn-block\" id=\"onButton\" type=\"submit\" name=\"onButton\">Turn On Feedbacks</button>";
 	echo "</form>";
