@@ -31,7 +31,8 @@ if($query && $perPage > 0 && $currentPage > 0)
 		else
 		{
 		$pageQuery = mysqli_query($con, "SELECT Course,Section,InsName,Feedback,time FROM feedback_record WHERE InsName LIKE '$instructor' AND SentStatus LIKE 'YES' LIMIT $perPage OFFSET $offset");
-		$result['totalPages'] = ceil(mysqli_num_rows($pageQuery)/$perPage);
+		$pageCountQ = mysqli_query($con, "SELECT Course,Section,InsName,Feedback,time FROM feedback_record WHERE InsName LIKE '$instructor' AND SentStatus LIKE 'YES'");
+		$result['totalPages'] = ceil(mysqli_num_rows($pageCountQ)/$perPage);
 		}
 		if($pageQuery)
 		{
