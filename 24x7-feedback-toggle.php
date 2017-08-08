@@ -14,7 +14,7 @@ if(!isset($_SESSION['username']))
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Instruction Division</title>
+<title>24x7 Feedack Toggle</title>
 <!-- InstanceEndEditable -->
 <!-- Bootstrap -->
 <link rel="stylesheet" href="css/bootstrap.css">
@@ -26,6 +26,7 @@ if(!isset($_SESSION['username']))
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 <!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" href="css/mid-sem-fb-config.css">
 <!-- InstanceEndEditable -->
 </head>
 
@@ -65,7 +66,17 @@ if(!isset($_SESSION['username']))
     <img src="images/hero_img.jpeg" alt="Placeholder image" class="img-responsive" id="heroimg"></div>
   <div class="row">
     <div class="col-md-12 col-lg-10 col-lg-offset-1"><!-- InstanceBeginEditable name="EditRegion3" -->
-     <!-- InstanceEndEditable --></div>
+      <div class="row">
+        <div class="col-md-12">
+          <h1>24x7 Feedback Control</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+          <?php require_once(__DIR__ . "/controllers/24x7-feedback-toggle-controller.php") ?>
+        </div>
+      </div>
+      <!-- InstanceEndEditable --></div>
   </div>
   <div class="row" id="foot-div">
     <footer>Instruction Division - BITS Pilani Hyderabad Campus</footer>
@@ -74,8 +85,8 @@ if(!isset($_SESSION['username']))
 <!-- /.container-fluid --><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> <script src="js/jquery-3.2.1.min.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="js/bootstrap.js"></script> 
-<!-- InstanceBeginEditable name="js" -->
-<!--Edit me for js-->
+<!-- InstanceBeginEditable name="js" --> 
+<script src="js/midsem-fb-config.js" type="text/javascript"></script>
 <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

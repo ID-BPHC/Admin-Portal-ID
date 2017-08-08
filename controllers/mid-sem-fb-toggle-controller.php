@@ -12,7 +12,7 @@ if ( !isset( $_SESSION[ 'username' ] ) ) {
 if(isset($_POST['offButton']))
 {
 	$time = time() - 10;
-	mysqli_query($con, "UPDATE portals SET end = '0000-00-00 00:00:00', start = '0000-00-00 00:00:00' WHERE name LIKE 'midsem'");
+	mysqli_query($con, "UPDATE portals SET end = '0000-00-00', start = '0000-00-00' WHERE name LIKE 'midsem'");
 	header("Location: ../mid-sem-feedback-config.php");
 	die();
 }
@@ -27,11 +27,11 @@ if(isset($_POST['onButton']))
 		die(mysqli_error($con));
 	}
 	header("Location: ../mid-sem-feedback-config.php");
+	die();
 }
 ?>
 <?php
-$time = time();
-$checkStatus = mysqli_query($con, "SELECT * FROM portals WHERE UNIX_TIMESTAMP(start) <= $time AND UNIX_TIMESTAMP(end) >= $time AND name LIKE 'midsem'");
+$checkStatus = mysqli_query($con, "SELECT * FROM portals WHERE start <= CURRENT_DATE AND end >= CURRENT_DATE AND name LIKE 'midsem'");
 
 if(!$checkStatus)
 {

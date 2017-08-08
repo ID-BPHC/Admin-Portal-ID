@@ -45,7 +45,7 @@ if(!isset($_SESSION['username']))
           <ul class="dropdown-menu">
             <li><a href="import-csv.php">Import Faculty/Course Details<span class="sr-only">(current)</span></a></li>
             <li><a href="mid-sem-feedback-config.php">Toggle Mid Sem Feedback</a></li>
-            <li><a href="#">Toggle 24x7 Feedback</a></li>
+            <li><a href="24x7-feedback-toggle.php">Toggle 24x7 Feedback</a></li>
             <li class="divider"></li>
             <li><a href="mid-sem-feedback-view.php">View Mid Sem Feedbacks</a></li>
             <li><a href="24x7-feedback-view.php">View 24x7 Feedbacks</a></li>
