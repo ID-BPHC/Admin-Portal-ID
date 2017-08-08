@@ -33,7 +33,7 @@ if(!isset($_SESSION['username']))
 
 <body style="padding-top: 50px">
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
+  <div class="container-fluid"> 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topFixedNavbar1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
@@ -41,15 +41,15 @@ if(!isset($_SESSION['username']))
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="topFixedNavbar1">
       <ul class="nav navbar-nav">
-        <li><a href="import-csv.php">Import CSV<span class="sr-only">(current)</span></a></li>
-        
-        <li><a href="mid-sem-feedback-config.php">Open/Close Mid Sem Feedback</a></li>
-        
         <li><a href="project-allotment.php">Project Allotment</a></li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View Feedbacks<span class="caret"></span></a>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Feedbacks<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="mid-sem-feedback-view.php">Mid Sem Feedbacks</a></li>
-            <li><a href="24x7-feedback-view.php">24x7 Feedbacks</a></li>
+            <li><a href="import-csv.php">Import Faculty/Course Details<span class="sr-only">(current)</span></a></li>
+            <li><a href="mid-sem-feedback-config.php">Toggle Mid Sem Feedback</a></li>
+            <li><a href="#">Toggle 24x7 Feedback</a></li>
+            <li class="divider"></li>
+            <li><a href="mid-sem-feedback-view.php">View Mid Sem Feedbacks</a></li>
+            <li><a href="24x7-feedback-view.php">View 24x7 Feedbacks</a></li>
           </ul>
         </li>
       </ul>
@@ -57,15 +57,15 @@ if(!isset($_SESSION['username']))
         <li><a href="logout.php">Logout</a></li>
       </ul>
     </div>
-    <!-- /.navbar-collapse -->
+    <!-- /.navbar-collapse --> 
   </div>
-  <!-- /.container-fluid -->
+  <!-- /.container-fluid --> 
 </nav>
 <div class="container-fluid">
   <div class="row" id="hero"> <img src="images/Logo.png" alt="Placeholder image" class="img-responsive" id="herologo">
     <h1 id="heroheading">Administration Portal</h1>
     <img src="images/hero_img.jpeg" alt="Placeholder image" class="img-responsive" id="heroimg"></div>
-<div class="row">
+  <div class="row">
     <div class="col-md-12 col-lg-10 col-lg-offset-1"><!-- InstanceBeginEditable name="EditRegion3" -->
       <div class="row">
         <div class="col-md-12">
@@ -81,11 +81,11 @@ if(!isset($_SESSION['username']))
   </div>
   <div class="row" id="foot-div">
     <footer>Instruction Division - BITS Pilani Hyderabad Campus</footer>
-</div>
+  </div>
 </div>
 <!-- /.container-fluid --><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> <script src="js/jquery-3.2.1.min.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.js"></script> 
 <!-- InstanceBeginEditable name="js" -->
 <script type="text/javascript" src="js/datepicker.js"></script>
 <script type="text/javascript" src="js/midsem-fb-config.js"></script>
