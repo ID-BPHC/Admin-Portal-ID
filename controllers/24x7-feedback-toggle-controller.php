@@ -12,14 +12,14 @@ if ( !isset( $_SESSION[ 'username' ] ) ) {
 if(isset($_POST['offButton']))
 {
 	$time = time() - 10;
-	mysqli_query($con, "UPDATE portals SET end = '0000-00-00', start = '0000-00-00' WHERE name LIKE '24x7'");
+	mysqli_query($con, "UPDATE portals SET end = NULL, start = NULL WHERE name LIKE '24x7'");
 	header("Location: ../24x7-feedback-toggle.php");
 	die();
 }
 
 if(isset($_POST['onButton']))
 {
-	$q = mysqli_query($con, "UPDATE portals SET start = '0000-00-00', end = '9999-12-31' WHERE name LIKE '24x7'");
+	$q = mysqli_query($con, "UPDATE portals SET start = '2008-01-01', end = '9999-12-31' WHERE name LIKE '24x7'");
 	if(!$q)
 	{
 		die(mysqli_error($con));

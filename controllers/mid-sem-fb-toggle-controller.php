@@ -11,8 +11,7 @@ if ( !isset( $_SESSION[ 'username' ] ) ) {
 <?php
 if(isset($_POST['offButton']))
 {
-	$time = time() - 10;
-	mysqli_query($con, "UPDATE portals SET end = '0000-00-00', start = '0000-00-00' WHERE name LIKE 'midsem'");
+	mysqli_query($con, "UPDATE portals SET end = NULL, start = NULL WHERE name LIKE 'midsem'");
 	header("Location: ../mid-sem-feedback-config.php");
 	die();
 }
