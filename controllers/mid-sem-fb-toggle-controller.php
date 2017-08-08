@@ -11,7 +11,8 @@ if ( !isset( $_SESSION[ 'username' ] ) ) {
 <?php
 if(isset($_POST['offButton']))
 {
-	mysqli_query($con, "TRUNCATE TABLE mid_sem_toggle");
+	$time = time() - 10;
+	mysqli_query($con, "UPDATE portals SET end = '0000-00-00 00:00:00', start = '0000-00-00 00:00:00' WHERE name LIKE 'midsem'");
 	header("Location: ../mid-sem-feedback-config.php");
 	die();
 }
@@ -20,7 +21,7 @@ if(isset($_POST['onButton']))
 {
 	$start = prep($_POST['startDate']);
 	$end = prep($_POST['endDate']);
-	$q = mysqli_query($con, "INSERT INTO mid_sem_toggle VALUES('$start', '$end')");
+	$q = mysqli_query($con, "UPDATE portals SET start = '$start', end = '$end' WHERE name LIKE 'midsem'");
 	if(!$q)
 	{
 		die(mysqli_error($con));
@@ -30,7 +31,7 @@ if(isset($_POST['onButton']))
 ?>
 <?php
 $time = time();
-$checkStatus = mysqli_query($con, "SELECT * FROM mid_sem_toggle WHERE UNIX_TIMESTAMP(start) <= $time AND UNIX_TIMESTAMP(end) >= $time");
+$checkStatus = mysqli_query($con, "SELECT * FROM portals WHERE UNIX_TIMESTAMP(start) <= $time AND UNIX_TIMESTAMP(end) >= $time AND name LIKE 'midsem'");
 
 if(!$checkStatus)
 {
