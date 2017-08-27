@@ -13,7 +13,6 @@ if(!isset($_SESSION['username']))
 
 <div class="form-group">
 <select name="instructors" id="instructors" class="form-control">
-	<option value="nil">------</option>
 	<option value="all">All Instructors</option>
 	<?php
 	$query = mysqli_query($con, "SELECT DISTINCT(InsName) FROM midsem ORDER BY InsName ASC");
@@ -28,12 +27,8 @@ if(!isset($_SESSION['username']))
 <div class="form-group">
 <label for="perPage">Records Per Page</label>
 <select name="perPage" id="perPage" class="form-control">
-	<option value="1">1</option>
-	<option value="5">5</option>
-	<option value="10">10</option>
-	<option value="15">15</option>
-	<option value="20">20</option>
-	<option value="50">50</option>
 	<option value="100">100</option>
+	<option value="100">500</option>
+	<option value="100">1000</option>
 </select>
 </div>

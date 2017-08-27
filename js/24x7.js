@@ -56,3 +56,5 @@ pageSelector.onchange = function()
 	"use strict";
 	getContents(1, document.getElementById("perPage").value);
 };
+
+getContents(1, document.getElementById("perPage").value);
