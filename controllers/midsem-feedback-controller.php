@@ -26,11 +26,11 @@ if($query && $perPage > 0 && $currentPage > 0)
 		
 		if($instructor == "all")
 		{
-		$pageQuery = mysqli_query($con, "SELECT Course,Section,InsName,ans1,ans2,ans3,time FROM midsem LIMIT $perPage OFFSET $offset");
+		$pageQuery = mysqli_query($con, "SELECT Course,Section,InsName,ans1,ans2,ans3,time FROM midsem ORDER BY time DESC LIMIT $perPage OFFSET $offset");
 		}
 		else
 		{
-		$pageQuery = mysqli_query($con, "SELECT Course,Section,InsName,ans1,ans2,ans3,time FROM midsem WHERE InsName LIKE '$instructor' LIMIT $perPage OFFSET $offset");
+		$pageQuery = mysqli_query($con, "SELECT Course,Section,InsName,ans1,ans2,ans3,time FROM midsem WHERE InsName LIKE '$instructor' ORDER BY time DESC LIMIT $perPage OFFSET $offset");
 		$pageCountQ = mysqli_query($con, "SELECT Course,Section,InsName,ans1,ans2,ans3,time FROM midsem WHERE InsName LIKE '$instructor'");
 		$result['totalPages'] = ceil(mysqli_num_rows($pageCountQ)/$perPage);
 		}
@@ -47,7 +47,7 @@ if($query && $perPage > 0 && $currentPage > 0)
 		else
 		{
 			$result['status'] = 100;
-			$result['msg'] = "Page query failed"; 
+			$result['msg'] = mysqli_error($con); 
 			echo json_encode($result);
 		}
 	}

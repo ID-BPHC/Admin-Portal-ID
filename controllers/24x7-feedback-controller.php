@@ -26,11 +26,11 @@ if($query && $perPage > 0 && $currentPage > 0)
 		
 		if($instructor == "all")
 		{
-		$pageQuery = mysqli_query($con, "SELECT Course,Section,InsName,Feedback,time FROM feedback_record WHERE SentStatus LIKE 'YES' LIMIT $perPage OFFSET $offset");
+		$pageQuery = mysqli_query($con, "SELECT Course,Section,InsName,Feedback,time FROM feedback_record WHERE SentStatus LIKE 'YES' ORDER BY time DESC LIMIT $perPage OFFSET $offset");
 		}
 		else
 		{
-		$pageQuery = mysqli_query($con, "SELECT Course,Section,InsName,Feedback,time FROM feedback_record WHERE InsName LIKE '$instructor' AND SentStatus LIKE 'YES' LIMIT $perPage OFFSET $offset");
+		$pageQuery = mysqli_query($con, "SELECT Course,Section,InsName,Feedback,time FROM feedback_record WHERE InsName LIKE '$instructor' AND SentStatus LIKE 'YES' ORDER BY time DESC LIMIT $perPage OFFSET $offset");
 		$pageCountQ = mysqli_query($con, "SELECT Course,Section,InsName,Feedback,time FROM feedback_record WHERE InsName LIKE '$instructor' AND SentStatus LIKE 'YES'");
 		$result['totalPages'] = ceil(mysqli_num_rows($pageCountQ)/$perPage);
 		}
@@ -47,7 +47,7 @@ if($query && $perPage > 0 && $currentPage > 0)
 		else
 		{
 			$result['status'] = 100;
-			$result['msg'] = "Page query failed"; 
+			$result['msg'] = mysqli_error($con); 
 			echo json_encode($result);
 		}
 	}
